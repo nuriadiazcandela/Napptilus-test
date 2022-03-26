@@ -1,0 +1,79 @@
+@import '../stylesheet/variables.scss';
+
+.container {
+  padding: 20px;
+  .container_cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    a {
+      padding: 5px;
+      width: 49%;
+      border: 1px solid $color-secondary;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      text-decoration: none;
+      color: $black;
+      .card {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        h2 {
+          font-size: 15px;
+          text-align: left;
+          font-weight: 400;
+        }
+        h3 {
+          font-size: 15px;
+          padding-bottom: 10px;
+          text-align: center;
+        }
+        img {
+          width: 100%;
+          max-width: 160px;
+          padding-bottom: 8px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    .container_cards {
+      a {
+        width: 32%;
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    padding: 30px;
+    .container_cards {
+      a {
+        width: 24%;
+        padding: 10px 15px;
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
+@media (min-width: 1500px) {
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+    .container_cards {
+      a {
+        max-width: 320px;
+        transition: all 0.3s ease-in-out;
+        img:hover {
+          transform: scale(1.1);
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+}

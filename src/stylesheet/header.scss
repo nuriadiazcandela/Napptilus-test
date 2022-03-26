@@ -1,0 +1,67 @@
+@import '../stylesheet/variables.scss';
+
+.header {
+  background: $color-primary;
+  text-transform: uppercase;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  .header_title {
+    font-size: 18px;
+  }
+  .icon_title {
+    padding-right: 20px;
+  }
+}
+.breadcrumb {
+  width: 100%;
+}
+form {
+  display: flex;
+  justify-content: flex-end;
+  position: sticky;
+  top: 66px;
+  width: 100%;
+  background-color: $color-tertiary;
+  padding: 10px;
+
+  .label {
+    font-size: 15px;
+    font-weight: 500;
+    padding-right: 10px;
+  }
+  .input {
+    border-radius: 20px;
+  }
+}
+@media (min-width: 992px) {
+  .header {
+    padding: 30px;
+    .header_title {
+      font-size: 25px;
+    }
+  }
+  form {
+    top: 86px;
+    align-items: center;
+    .label {
+      font-size: 18px;
+    }
+    .input {
+      width: 250px;
+      height: 30px;
+    }
+  }
+}
+@media (min-width: 1500px) {
+  .header,
+  form {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+}
