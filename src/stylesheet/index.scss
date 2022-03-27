@@ -1,0 +1,46 @@
+* {
+  font-family: 'Jost', sans-serif;
+  font-weight: 700;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.breadcrumb {
+  padding: 5px 15px;
+  a {
+    font-size: 10px;
+    color: #707070;
+    text-decoration: none;
+    .fa-house {
+      padding-right: 5px;
+      font-size: 11px;
+    }
+  }
+  .last_breadcrumb {
+    color: #000000;
+  }
+}
+@media (min-width: 992px) {
+  .breadcrumb {
+    a {
+      font-size: 12px;
+      .fa-house {
+        font-size: 14px;
+      }
+    }
+  }
+}
+@media (min-width: 1500px) {
+  .breadcrumb {
+    max-width: 1440px;
+    margin: 0 auto !important;
+  }
+}

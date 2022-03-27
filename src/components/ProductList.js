@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Link, generatePath } from 'react-router-dom';
 import getDataFromApi from '../services/GetDataFromApi';
 import '../stylesheet/landing.scss';
+import { Breadcrumbs } from '@mui/material';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { faHouse } from '@fortawesome/free-solid-svg-icons';
 
 export const ProductList = () => {
   const [productList, setProductList] = useState([]);
@@ -19,6 +23,12 @@ export const ProductList = () => {
 
   return (
     <>
+      <Breadcrumbs separator="›" aria-label="breadcrumb" className="breadcrumb">
+        <Link href="/#">
+          <FontAwesomeIcon icon={faHouse} />
+          Home
+        </Link>
+      </Breadcrumbs>
       <section className="container">
         <ul className="container_cards">
           {productList.map((product, index) => (
