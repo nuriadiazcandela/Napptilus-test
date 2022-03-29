@@ -2,7 +2,6 @@ import React from 'react';
 import { HashRouter, Switch, Route } from 'react-router-dom';
 import { Header } from './Header';
 import { Footer } from './Footer';
-// import { SearchBar } from './SearchBar';
 import { ProductList } from './ProductList';
 import { ProductDetail } from './ProductDetail';
 

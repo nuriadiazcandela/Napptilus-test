@@ -5,6 +5,8 @@ import '../stylesheet/productDetail.scss';
 import { Breadcrumbs } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse } from '@fortawesome/free-solid-svg-icons';
+import { Colors } from './Colors';
+import { Storages } from './Storages';
 
 export const ProductDetail = () => {
   const [productDetail, setProductDetail] = useState(['']);
@@ -21,6 +23,7 @@ export const ProductDetail = () => {
       });
   }, [id]);
 
+  function handleButtonAddCart() {}
   return (
     <>
       <Breadcrumbs separator="›" aria-label="breadcrumb" className="breadcrumb">
@@ -28,10 +31,10 @@ export const ProductDetail = () => {
           <FontAwesomeIcon icon={faHouse} />
           Home
         </Link>
-        <Link className="last_breadcrumb">Detalle producto</Link>
+        <span className="last_breadcrumb">Detalle producto</span>
       </Breadcrumbs>
       {productDetail.map((item) => (
-        <article key={item.id} className="product">
+        <article key={id} className="product">
           <h2>{item.model}</h2>
           <div className="product_container">
             <div className="product_image">
@@ -39,7 +42,7 @@ export const ProductDetail = () => {
             </div>
             <div className="product_details">
               <div className="product_description">
-                <h3>{item.price} €</h3>
+                <h3> {item.price} € </h3>
                 <ul>
                   <li>
                     Marca: <span>{item.brand}</span>
@@ -57,7 +60,7 @@ export const ProductDetail = () => {
                     Resolucion de pantalla: <span>{item.displayResolution}</span>
                   </li>
                   <li>
-                    Bateria: <span>{item.battery}</span>
+                    Bateria:<span>{item.battery}</span>
                   </li>
                   <li>
                     Dimensiones: <span>{item.dimentions}</span>
@@ -65,9 +68,23 @@ export const ProductDetail = () => {
                   <li>
                     Peso: <span>{item.weight} gr.</span>
                   </li>
+                  <li>
+                    Cámara 1:
+                    <span>{item.primaryCamera}</span>
+                  </li>
+                  <li>
+                    Cámara 2: <span>{item.secondaryCamera}</span>
+                  </li>
                 </ul>
               </div>
-              <div className="product_actions"></div>
+
+              <div className="product_actions">
+                <Colors></Colors>
+                <Storages></Storages>
+                <button className="addtoCart" onClick={handleButtonAddCart}>
+                  Añadir al carrito
+                </button>
+              </div>
             </div>
           </div>
         </article>

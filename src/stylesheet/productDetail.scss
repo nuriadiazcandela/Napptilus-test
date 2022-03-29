@@ -3,7 +3,7 @@
 .product {
   padding: 20px;
   margin-bottom: 40px;
-  height: 100vh;
+
   h2 {
     text-align: center;
     margin-bottom: 20px;
@@ -36,13 +36,47 @@
         }
       }
     }
+    .product_actions {
+      margin-top: 20px;
+      border: 1px solid $color-secondary;
+      padding: 15px;
+      .product_options {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        label {
+          font-size: 14px;
+        }
+        select {
+          position: relative;
+          option {
+            position: absolute;
+            top: 10px;
+          }
+        }
+      }
+      .addtoCart {
+        background-color: $color-primary;
+        box-shadow: none;
+        padding: 10px 15px;
+        text-transform: uppercase;
+        border: 1px solid $color-secondary;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+          color: $white;
+          background-color: $black;
+          border: 1px solid $black;
+        }
+      }
+    }
   }
 }
 
 @media (min-width: 768px) {
   .product {
     padding: 30px;
-
+    height: 100vh;
     h2 {
       width: 100%;
     }

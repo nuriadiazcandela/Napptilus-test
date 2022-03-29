@@ -26,11 +26,13 @@ body {
   }
   .last_breadcrumb {
     color: #000000;
+    font-size: 10px;
   }
 }
 @media (min-width: 992px) {
   .breadcrumb {
-    a {
+    a,
+    .last_breadcrumb {
       font-size: 12px;
       .fa-house {
         font-size: 14px;
@@ -40,7 +42,7 @@ body {
 }
 @media (min-width: 1500px) {
   .breadcrumb {
-    max-width: 1440px;
+    max-width: 1920px;
     margin: 0 auto !important;
   }
 }
