@@ -12,7 +12,6 @@ function App() {
       <HashRouter>
         <Switch>
           <Route exact path="/">
-            {/* <SearchBar /> */}
             <ProductList />
           </Route>
           <Route path="/detail/:id">

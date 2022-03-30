@@ -13,7 +13,10 @@ export const Header = () => {
           Only Phones
         </h1>
       </Link>
-      <FontAwesomeIcon icon={faCartShopping} />
+      <div className="cart">
+        <FontAwesomeIcon icon={faCartShopping} />
+        <span>(0)</span>
+      </div>
     </header>
   );
 };

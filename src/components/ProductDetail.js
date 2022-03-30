@@ -87,6 +87,9 @@ export const ProductDetail = () => {
               </div>
             </div>
           </div>
+          <Link className="back_home" to="/">
+            Volver a la página de inicio
+          </Link>
         </article>
       ))}
     </>
